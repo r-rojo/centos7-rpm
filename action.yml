@@ -1,0 +1,17 @@
+name: OPAE CentOS7.6 RPMs
+desciption: Build CentOS 7.6 OPAE RPMs
+inputs:
+  branch:
+    desciption: branch to checkout
+    required: false
+    default: 'master'
+  build-type:
+    desciption: cmake build type
+    required: false
+    default: 'Release'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.branch }}
+    - ${{ inputs.build-type }}
