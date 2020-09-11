@@ -9,5 +9,5 @@ git clone https://github.com/OPAE/opae-sdk.git -b $1
 cd opae-sdk
 mkdir build
 cd build
-cmake .. -DCMAKE_BUILD_TYPE=$2  -DCPACK_GENERATOR=RPM -DOPAE_BUILD_LEGACY=ON
+cmake .. -DCMAKE_BUILD_TYPE=$2  -DCPACK_GENERATOR=RPM -DOPAE_BUILD_LEGACY=ON -DOPAE_PYTHON_VERSION=3.6
 make package_rpm -j $(nproc)
